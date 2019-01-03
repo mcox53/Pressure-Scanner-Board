@@ -30,6 +30,11 @@ void setup() {
   // initalize the  data ready and chip select pins:
   pinMode(dataReadyPin, INPUT);
   pinMode(chipSelectPin, OUTPUT);
+
+  // Changed to true (1) when measurement complete
+  bool measurementStatus = 0;
+  byte chipStatus;
+  uint32_t pressureReading;
 }
 
 void loop() {
@@ -37,11 +42,19 @@ void loop() {
   // Issue 3 byte measurement command
   SPI.transfer(startAvg16);
 
-  // Data ready pin can utilize interrupt as well
-  // Pin set to high means data ready
-  if (digitalRead(dataReadyPin) == HIGH) {
-  
-  }  
+  // Continuously read status byte until sensor processing complete
+  while(measurementStatus == 0){
+    chipStatus = readStatus();
+    
+    if(((chipStatus >> 5) & 0b001) == 1){
+      measurementStatus == 1; 
+    }
+  }
+
+  pressureReading = readMeasurement();
+  measurementStatus = 0;
+
+  printf("Pressure raw (in H20): %d", presureReading);
 }
 
 void sendMeasurecmd(byte command) {
@@ -56,5 +69,52 @@ void sendMeasurecmd(byte command) {
 
   // Raise SS pin
   digitalWrite(chipSelectPin, HIGH);
+}
+
+uint32_t readMeasurement(void){
+
+  uint8_t readByte;
+  uint32_t pressure;
+
+  // Lower SS pin
+  digitalWrite(chipSelectPin, LOW);
+
+  // Send read byte command
+  SPI.transfer(SensorReadByte);
+
+  // Send dummy bytes
+  for(uint8_t i = 0; i < 6; i++){
+    SPI.transfer(0x00);
+  }
+  
+  // Read in status byte
+  readByte = SPI.transfer(0x00);
+
+  for(uint8_t i = 3; i > 0; i--){
+    readByte = SPI.transfer(0x00);
+    pressure |= (readByte << (8 * i));
+  }
+
+  // Raise SS pin
+  digitalWrite(chipSelectPin, HIGH);
+  
+  return pressure;
+}
+
+byte readStatus(void){
+
+  // Lower SS pin
+  digitalWrite(chipSelectPin, LOW);
+
+  // Send status byte command
+  SPI.transfer(SensorStatus);
+
+  // Send dummy byte to read received byte
+  byte status = SPI.transfer(0x00);
+  
+  // Raise SS pin
+  digitalWrite(chipSelectPin, HIGH);
+
+  return status;
 }
 
