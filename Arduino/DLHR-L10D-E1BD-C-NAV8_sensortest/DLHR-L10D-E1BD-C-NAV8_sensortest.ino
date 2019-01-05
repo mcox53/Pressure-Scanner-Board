@@ -20,6 +20,10 @@
 const int chipSelectPin = 7;
 const int dataReadyPin = 6;
 
+// Changed to true (1) when measurement complete
+bool measurementStatus = 0;
+byte chipStatus;
+uint32_t pressureReading;
 
 void setup() {
   Serial.begin(9600);
@@ -30,11 +34,6 @@ void setup() {
   // initalize the  data ready and chip select pins:
   pinMode(dataReadyPin, INPUT);
   pinMode(chipSelectPin, OUTPUT);
-
-  // Changed to true (1) when measurement complete
-  bool measurementStatus = 0;
-  byte chipStatus;
-  uint32_t pressureReading;
 }
 
 void loop() {
@@ -54,7 +53,7 @@ void loop() {
   pressureReading = readMeasurement();
   measurementStatus = 0;
 
-  printf("Pressure raw (in H20): %d", presureReading);
+  printf("Pressure raw (in H20): %d", pressureReading);
 }
 
 void sendMeasurecmd(byte command) {
