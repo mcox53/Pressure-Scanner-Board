@@ -12,10 +12,11 @@
 #define startAvg4       0xAD
 #define startAvg8       0xAE
 #define startAvg16      0xAF
-#define dummyByte       0x00
 
 #define SensorReadByte  0xF0      // This must be followed by 6 byts of 0x00, done in function
 #define SensorStatus    0xF0      // Send only this one byte for status
+
+SPISettings Standard(2000000, MSBFIRST, SPI_MODE0);
 
 const int chipSelectPin = 7;
 const int dataReadyPin = 6;
@@ -38,10 +39,8 @@ void setup() {
 
 void loop() {
 
-  // Issue 3 byte measurement command
-  SPI.transfer(startAvg16);
-
   // Continuously read status byte until sensor processing complete
+  // This will most likely be an interrupt in the future
   while(measurementStatus == 0){
     chipStatus = readStatus();
     
@@ -57,6 +56,9 @@ void loop() {
 }
 
 void sendMeasurecmd(byte command) {
+
+  // Initiate a SPI Transaction
+  SPI.beginTransaction(Standard);
   
   // Lower SS pin
   digitalWrite(chipSelectPin, LOW);
@@ -68,6 +70,9 @@ void sendMeasurecmd(byte command) {
 
   // Raise SS pin
   digitalWrite(chipSelectPin, HIGH);
+
+  // Complete SPI Transaction
+  SPI.endTransaction();
 }
 
 uint32_t readMeasurement(void){
@@ -75,6 +80,9 @@ uint32_t readMeasurement(void){
   uint8_t readByte;
   uint32_t pressure;
 
+  // Initiate a SPI Transaction
+  SPI.beginTransaction(Standard);
+  
   // Lower SS pin
   digitalWrite(chipSelectPin, LOW);
 
@@ -96,11 +104,17 @@ uint32_t readMeasurement(void){
 
   // Raise SS pin
   digitalWrite(chipSelectPin, HIGH);
+
+  // Complete SPI Transaction
+  SPI.endTransaction();
   
   return pressure;
 }
 
 byte readStatus(void){
+
+  // Initiate a SPI Transaction
+  SPI.beginTransaction(Standard);
 
   // Lower SS pin
   digitalWrite(chipSelectPin, LOW);
@@ -114,6 +128,8 @@ byte readStatus(void){
   // Raise SS pin
   digitalWrite(chipSelectPin, HIGH);
 
+  // Complete SPI Transaction
+  SPI.endTransaction();
+
   return status;
 }
-
