@@ -1,4 +1,4 @@
-update=11/3/2018 6:43:30 PM
+update=2/8/2019 9:58:01 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,11 @@ LibName32=valves
 LibName33=ATSAMD21G18A-AU Footprint Symbol/ATSAMD21G18A-AU
 LibName34=ATSAMD21G18A-AU Schematic Symbol/ATSAMD21G18A-AU
 LibName35=C:/Users/Matt/Dropbox/Documents/FSAE/PCB/DashboardPCB/Custom Libraries/samd21g18a-au
+LibName36=Libraries/apa102c
+LibName37=Libraries/ATSAMD21G18A-AU
+LibName38=Libraries/B3FS-4005P
+LibName39=Libraries/cortex_debug
+LibName40=Libraries/lm2734
+LibName41=Libraries/prtr5v0u2x
+LibName42=Libraries/samd21g18a-au
+LibName43=Libraries/dlhr-l10d-e1bd-c-nav8

@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DLHR-L10D-E1BD-C-NAV8
+D Pressure Sensor, 10" H20, 18 BIT, Dual Ports, Same Side
+K pressure, sensor
+$ENDCMP
+#
+#End Doc Library

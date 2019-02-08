@@ -38,13 +38,12 @@ LIBS:cortex_debug
 LIBS:lm2734
 LIBS:prtr5v0u2x
 LIBS:samd21g18a-au
-LIBS:dlhr-l10d-e1bd-c-nav8
 LIBS:Pressure Scanner Board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -1072,16 +1071,4 @@ F 3 "" H 8900 2050 50  0001 C CNN
 	1    8900 1850
 	1    0    0    -1  
 $EndComp
-$Sheet
-S 10100 1050 500  175 
-U 5C5DECC1
-F0 "Power Supply" 60
-F1 "PowerSupply.sch" 60
-$EndSheet
-$Sheet
-S 10100 1400 500  175 
-U 5C5DED09
-F0 "Sensors" 60
-F1 "Sensors.sch" 60
-$EndSheet
 $EndSCHEMATC
