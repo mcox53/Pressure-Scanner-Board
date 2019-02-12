@@ -1,4 +1,4 @@
-update=2/12/2019 9:46:57 AM
+update=2/12/2019 11:08:49 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -73,3 +73,6 @@ LibName41=Libraries/prtr5v0u2x
 LibName42=Libraries/samd21g18a-au
 LibName43=Libraries/dlhr-l10d-e1bd-c-nav8
 LibName44=Libraries/hscdann015pa2a5
+LibName45=Libraries/AP2112K-3.3TRG1
+LibName46=Libraries/lm1117_edited
+LibName47=Libraries/MF-MSMF050-2

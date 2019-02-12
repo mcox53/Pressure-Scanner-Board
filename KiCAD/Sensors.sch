@@ -40,6 +40,9 @@ LIBS:prtr5v0u2x
 LIBS:samd21g18a-au
 LIBS:dlhr-l10d-e1bd-c-nav8
 LIBS:hscdann015pa2a5
+LIBS:AP2112K-3.3TRG1
+LIBS:lm1117_edited
+LIBS:MF-MSMF050-2
 LIBS:Pressure Scanner Board-cache
 EELAYER 25 0
 EELAYER END
