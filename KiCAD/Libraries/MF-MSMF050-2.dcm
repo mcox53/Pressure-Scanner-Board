@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 500mA
+D PPTC Fuse, 500mA
+K resettable fuse PTC PPTC polyfuse polyswitch
+$ENDCMP
+#
+$CMP Polyfuse
+D resettable fuse, polymeric positive temperature coefficient (PPTC)
+K resettable fuse PTC PPTC polyfuse polyswitch
+$ENDCMP
+#
+#End Doc Library

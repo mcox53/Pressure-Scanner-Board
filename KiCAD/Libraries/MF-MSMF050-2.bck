@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Polyfuse
+D resettable fuse, polymeric positive temperature coefficient (PPTC)
+K resettable fuse PTC PPTC polyfuse polyswitch
+$ENDCMP
+#
+#End Doc Library

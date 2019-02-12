@@ -1,0 +1,51 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AP2112K-3.3
+D AP2112K-3.3, 3.3V 600mA LDO regulator. SOT-25 footprint
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-1.5
+D 150mA low dropout linear regulator, wide input voltage range, 1.5V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-1.8
+D 150mA low dropout linear regulator, wide input voltage range, 1.8V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-2.5
+D 150mA low dropout linear regulator, wide input voltage range, 2.5V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-2.8
+D 150mA low dropout linear regulator, wide input voltage range, 2.8V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-3.0
+D 150mA low dropout linear regulator, wide input voltage range, 3.0V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-3.3
+D 150mA low dropout linear regulator, wide input voltage range, 3.3V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+$CMP AP2204K-5.0
+D 150mA low dropout linear regulator, wide input voltage range, 5.0V fixed positive output, SOT-23-5 package
+K linear regulator ldo fixed positive
+F https://www.diodes.com/assets/Datasheets/AP2204.pdf
+$ENDCMP
+#
+#End Doc Library
