@@ -530,6 +530,12 @@ Wire Wire Line
 Text Notes 3250 1275 0    59   ~ 0
 ±10" H2O, 18bit, Differential Pressure Sensors
 Wire Notes Line
+	4325 5325 6575 5325
+Wire Notes Line
+	6575 5325 6575 1400
+Wire Notes Line
+	6575 1400 4325 1400
+Wire Notes Line
 	4325 1400 4325 5325
 Text Notes 4875 5525 0    59   ~ 0
 Optional Expansion Slots
@@ -740,10 +746,4 @@ Wire Wire Line
 	10150 2550 10150 2425
 Text Notes 8375 3525 0    59   ~ 0
 3.3V to 5V Bi-Directional Level Shift
-Wire Notes Line
-	6550 5325 6550 1400
-Wire Notes Line
-	4325 5325 6550 5325
-Wire Notes Line
-	6550 1400 4325 1400
 $EndSCHEMATC

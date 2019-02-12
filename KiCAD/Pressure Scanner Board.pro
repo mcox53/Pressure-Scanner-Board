@@ -1,4 +1,4 @@
-update=2/8/2019 9:58:01 AM
+update=2/12/2019 9:46:57 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -72,3 +72,4 @@ LibName40=Libraries/lm2734
 LibName41=Libraries/prtr5v0u2x
 LibName42=Libraries/samd21g18a-au
 LibName43=Libraries/dlhr-l10d-e1bd-c-nav8
+LibName44=Libraries/hscdann015pa2a5

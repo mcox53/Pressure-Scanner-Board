@@ -39,12 +39,13 @@ LIBS:lm2734
 LIBS:prtr5v0u2x
 LIBS:samd21g18a-au
 LIBS:dlhr-l10d-e1bd-c-nav8
+LIBS:hscdann015pa2a5
 LIBS:Pressure Scanner Board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -297,74 +298,14 @@ F 3 "" H 8550 1650 50  0001 C CNN
 $EndComp
 Text GLabel 8350 1850 0    39   Input ~ 0
 RESETN
-Text GLabel 2700 2000 0    39   Input ~ 0
-PA2
-Text GLabel 2700 2100 0    39   Input ~ 0
-PA3
-Text GLabel 2700 2400 0    39   Input ~ 0
-PB8
-Text GLabel 2700 2500 0    39   Input ~ 0
-PB9
-Text GLabel 2700 2600 0    39   Input ~ 0
-PA4
-Text GLabel 2700 2700 0    39   Input ~ 0
-PA5
-Text GLabel 2700 2800 0    39   Input ~ 0
-PA6
-Text GLabel 2700 2900 0    39   Input ~ 0
-PA7
-Text GLabel 2700 3300 0    39   Input ~ 0
-PA8
-Text GLabel 2700 3400 0    39   Input ~ 0
-PA9
-Text GLabel 2700 3500 0    39   Input ~ 0
-PA10
-Text GLabel 2700 3600 0    39   Input ~ 0
-PA11
-Text GLabel 2700 3900 0    39   Input ~ 0
-PB10
-Text GLabel 2700 4000 0    39   Input ~ 0
-PB11
-Text GLabel 2700 4100 0    39   Input ~ 0
-PA12
-Text GLabel 2700 4200 0    39   Input ~ 0
-PA13
-Text GLabel 2700 4300 0    39   Input ~ 0
-PA14
-Text GLabel 2700 4400 0    39   Input ~ 0
-PA15
 Text GLabel 6350 1800 2    39   Input ~ 0
 RX_LED
-Text GLabel 6350 1900 2    39   Input ~ 0
-PB2
 Text GLabel 6350 2000 2    39   Input ~ 0
 SWDIO
 Text GLabel 6350 2100 2    39   Input ~ 0
 SWCLK
-Text GLabel 6350 2500 2    39   Input ~ 0
-PA28
 Text GLabel 6350 2700 2    39   Input ~ 0
 TX_LED
-Text GLabel 6350 2800 2    39   Input ~ 0
-PB23
-Text GLabel 6350 2900 2    39   Input ~ 0
-PB22
-Text GLabel 6350 3700 2    39   Input ~ 0
-PA23
-Text GLabel 6350 3800 2    39   Input ~ 0
-PA22
-Text GLabel 6350 3900 2    39   Input ~ 0
-PA21
-Text GLabel 6350 4000 2    39   Input ~ 0
-PA20
-Text GLabel 6350 4100 2    39   Input ~ 0
-PA19
-Text GLabel 6350 4200 2    39   Input ~ 0
-PA18
-Text GLabel 6350 4300 2    39   Input ~ 0
-PA17
-Text GLabel 6350 4400 2    39   Input ~ 0
-PA16
 $Comp
 L Cortex_Debug J?
 U 1 1 5C5DDD18
@@ -404,129 +345,10 @@ F 3 "" H 1400 6550 50  0001 C CNN
 	1    1400 6550
 	1    0    0    -1  
 $EndComp
-Text GLabel 4500 5450 0    39   Input ~ 0
-VIN
-Text GLabel 4500 5950 0    39   Input ~ 0
-PA2
-Text GLabel 4500 6050 0    39   Input ~ 0
-PA3
-Text GLabel 4500 6150 0    39   Input ~ 0
-PB8
-Text GLabel 4500 6250 0    39   Input ~ 0
-PB9
-Text GLabel 4500 6350 0    39   Input ~ 0
-PA4
-Text GLabel 4500 6450 0    39   Input ~ 0
-PA5
-Text GLabel 4500 6550 0    39   Input ~ 0
-PA6
-Text GLabel 4500 6650 0    39   Input ~ 0
-PA7
-Text GLabel 4500 6750 0    39   Input ~ 0
-PA8
-Text GLabel 4500 6850 0    39   Input ~ 0
-PA9
-Text GLabel 4500 6950 0    39   Input ~ 0
-PA10
-Text GLabel 4500 7050 0    39   Input ~ 0
-PA11
-Text GLabel 4500 7150 0    39   Input ~ 0
-PB10
-Text GLabel 4500 7250 0    39   Input ~ 0
-PB11
-Text GLabel 4500 7350 0    39   Input ~ 0
-PA12
-Text GLabel 6000 7350 2    39   Input ~ 0
-PA13
-Text GLabel 6000 7250 2    39   Input ~ 0
-PA14
-Text GLabel 6000 7150 2    39   Input ~ 0
-PA15
-Text GLabel 6000 6350 2    39   Input ~ 0
-PA23
-Text GLabel 6000 6450 2    39   Input ~ 0
-PA22
-Text GLabel 6000 6550 2    39   Input ~ 0
-PA21
-Text GLabel 6000 6650 2    39   Input ~ 0
-PA20
-Text GLabel 6000 6750 2    39   Input ~ 0
-PA19
-Text GLabel 6000 6850 2    39   Input ~ 0
-PA18
-Text GLabel 6000 6950 2    39   Input ~ 0
-PA17
-Text GLabel 6000 7050 2    39   Input ~ 0
-PA16
 Text GLabel 9600 5950 2    39   Input ~ 0
 TX_LED
-Text GLabel 6000 6150 2    39   Input ~ 0
-PB23
-Text GLabel 6000 6250 2    39   Input ~ 0
-PB22
 Text GLabel 8950 5950 2    39   Input ~ 0
 RX_LED
-Text GLabel 6000 5950 2    39   Input ~ 0
-PB2
-Text GLabel 6000 6050 2    39   Input ~ 0
-PA28
-$Comp
-L +3.3V #PWR?
-U 1 1 5C5DDD1B
-P 4150 5400
-F 0 "#PWR?" H 4150 5250 50  0001 C CNN
-F 1 "+3.3V" H 4150 5540 50  0000 C CNN
-F 2 "" H 4150 5400 50  0001 C CNN
-F 3 "" H 4150 5400 50  0001 C CNN
-	1    4150 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L +3.3V #PWR?
-U 1 1 5C5DDD1C
-P 6100 5400
-F 0 "#PWR?" H 6100 5250 50  0001 C CNN
-F 1 "+3.3V" H 6100 5540 50  0000 C CNN
-F 2 "" H 6100 5400 50  0001 C CNN
-F 3 "" H 6100 5400 50  0001 C CNN
-	1    6100 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x20 J?
-U 1 1 5C5DDD1D
-P 5450 6350
-F 0 "J?" H 5450 7350 50  0000 C CNN
-F 1 ".1\" Headers" H 5300 5250 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x20_Pitch2.54mm" H 5450 6350 50  0001 C CNN
-F 3 "" H 5450 6350 50  0001 C CNN
-	1    5450 6350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Conn_01x20 J?
-U 1 1 5C5DDD1E
-P 5000 6350
-F 0 "J?" H 5000 7350 50  0000 C CNN
-F 1 ".1\" Headers" H 4850 5250 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x20_Pitch2.54mm" H 5000 6350 50  0001 C CNN
-F 3 "" H 5000 6350 50  0001 C CNN
-	1    5000 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 5C5DDD1F
-P 6400 5400
-F 0 "#PWR?" H 6400 5250 50  0001 C CNN
-F 1 "+5V" H 6400 5540 50  0000 C CNN
-F 2 "" H 6400 5400 50  0001 C CNN
-F 3 "" H 6400 5400 50  0001 C CNN
-	1    6400 5400
-	1    0    0    -1  
-$EndComp
-Text Notes 5000 5200 0    49   ~ 0
-0.100" Headers\n
 Text Notes 1800 5800 0    49   ~ 0
 SWD Debug Header
 Wire Wire Line
@@ -582,73 +404,13 @@ Wire Wire Line
 Wire Wire Line
 	8350 1850 8700 1850
 Wire Wire Line
-	2700 2000 2900 2000
-Wire Wire Line
-	2700 2100 2900 2100
-Wire Wire Line
-	2700 2400 2900 2400
-Wire Wire Line
-	2700 2500 2900 2500
-Wire Wire Line
-	2700 2600 2900 2600
-Wire Wire Line
-	2700 2700 2900 2700
-Wire Wire Line
-	2700 2800 2900 2800
-Wire Wire Line
-	2700 2900 2900 2900
-Wire Wire Line
 	6100 1800 6350 1800
-Wire Wire Line
-	6100 1900 6350 1900
 Wire Wire Line
 	6100 2000 6350 2000
 Wire Wire Line
 	6100 2100 6350 2100
 Wire Wire Line
-	6100 2500 6350 2500
-Wire Wire Line
 	6100 2700 6350 2700
-Wire Wire Line
-	6100 2800 6350 2800
-Wire Wire Line
-	6100 2900 6350 2900
-Wire Wire Line
-	6100 3700 6350 3700
-Wire Wire Line
-	6100 3800 6350 3800
-Wire Wire Line
-	6100 3900 6350 3900
-Wire Wire Line
-	6100 4000 6350 4000
-Wire Wire Line
-	6100 4100 6350 4100
-Wire Wire Line
-	6100 4200 6350 4200
-Wire Wire Line
-	6100 4300 6350 4300
-Wire Wire Line
-	6100 4400 6350 4400
-Wire Wire Line
-	2700 3300 2900 3300
-Wire Wire Line
-	2700 3400 2900 3400
-Wire Wire Line
-	2700 3500 2900 3500
-Wire Wire Line
-	2700 3600 2900 3600
-Wire Wire Line
-	2700 3900 2900 3900
-Wire Wire Line
-	2700 4000 2900 4000
-Wire Wire Line
-	2700 4100 2900 4100
-Wire Wire Line
-	2700 4200 2900 4200
-Wire Wire Line
-	2700 4300 2900 4300
-Wire Wire Line
-	2700 4400 2900 4400
 Wire Wire Line
 	2700 6150 2900 6150
 Wire Wire Line
@@ -664,86 +426,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 6250 1400 6250
 Connection ~ 1400 6250
-Wire Wire Line
-	4500 5450 4800 5450
-Wire Wire Line
-	4500 5950 4800 5950
-Wire Wire Line
-	4500 6050 4800 6050
-Wire Wire Line
-	4500 6150 4800 6150
-Wire Wire Line
-	4500 6250 4800 6250
-Wire Wire Line
-	4500 6350 4800 6350
-Wire Wire Line
-	4500 6450 4800 6450
-Wire Wire Line
-	4500 6550 4800 6550
-Wire Wire Line
-	4500 6650 4800 6650
-Wire Wire Line
-	4500 6750 4800 6750
-Wire Wire Line
-	4500 6850 4800 6850
-Wire Wire Line
-	4500 6950 4800 6950
-Wire Wire Line
-	4500 7050 4800 7050
-Wire Wire Line
-	4500 7150 4800 7150
-Wire Wire Line
-	4500 7250 4800 7250
-Wire Wire Line
-	4500 7350 4800 7350
-Wire Wire Line
-	6100 5450 6100 5400
-Wire Wire Line
-	5650 5950 6000 5950
-Wire Wire Line
-	5650 6050 6000 6050
-Wire Wire Line
-	5650 6150 6000 6150
-Wire Wire Line
-	5650 6250 6000 6250
-Wire Wire Line
-	5650 6350 6000 6350
-Wire Wire Line
-	5650 6450 6000 6450
-Wire Wire Line
-	5650 6550 6000 6550
-Wire Wire Line
-	5650 6650 6000 6650
-Wire Wire Line
-	5650 6750 6000 6750
-Wire Wire Line
-	5650 6850 6000 6850
-Wire Wire Line
-	5650 6950 6000 6950
-Wire Wire Line
-	5650 7050 6000 7050
-Wire Wire Line
-	5650 7150 6000 7150
-Wire Wire Line
-	5650 7250 6000 7250
-Wire Wire Line
-	5650 7350 6000 7350
-Wire Wire Line
-	5650 5550 6400 5550
-Wire Wire Line
-	6400 5650 5650 5650
-Wire Wire Line
-	6100 5450 5650 5450
-Wire Wire Line
-	6400 5400 6400 5650
-Connection ~ 6400 5550
-Wire Wire Line
-	4150 5650 4800 5650
-Wire Wire Line
-	4150 5400 4150 5650
-Wire Wire Line
-	4800 5550 4150 5550
-Connection ~ 4150 5550
 Connection ~ 8550 1850
 Wire Wire Line
 	8550 1900 8700 1900
@@ -900,22 +582,6 @@ NoConn ~ 2700 6250
 NoConn ~ 2700 6350
 NoConn ~ 1500 6350
 NoConn ~ 1500 6450
-Text GLabel 6000 5750 2    39   Input ~ 0
-GND
-Text GLabel 6000 5850 2    39   Input ~ 0
-GND
-Text GLabel 4500 5750 0    39   Input ~ 0
-GND
-Text GLabel 4500 5850 0    39   Input ~ 0
-GND
-Wire Wire Line
-	4500 5750 4800 5750
-Wire Wire Line
-	4500 5850 4800 5850
-Wire Wire Line
-	5650 5750 6000 5750
-Wire Wire Line
-	5650 5850 6000 5850
 Wire Wire Line
 	6650 2400 6650 2500
 Wire Wire Line
