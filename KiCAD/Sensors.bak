@@ -43,12 +43,15 @@ LIBS:hscdann015pa2a5
 LIBS:AP2112K-3.3TRG1
 LIBS:lm1117_edited
 LIBS:MF-MSMF050-2
+LIBS:mcp2515
+LIBS:mcp2551
+LIBS:cesd5v0ap
 LIBS:Pressure Scanner Board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title ""
 Date ""
 Rev ""
@@ -749,4 +752,12 @@ Wire Notes Line
 	4325 5325 6550 5325
 Wire Notes Line
 	6550 1400 4325 1400
+Text Notes 7375 7500 0    49   ~ 0
+Pressure Scanner Board - Sensors
+Text Notes 8150 7650 0    49   ~ 0
+2/8/19
+Text Notes 10575 7650 0    49   ~ 0
+0
+Text Notes 7000 7100 0    79   ~ 0
+Author: Matthew Cox\nOrganization: University of Connecticut Formula SAE
 $EndSCHEMATC

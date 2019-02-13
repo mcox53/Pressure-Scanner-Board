@@ -43,12 +43,15 @@ LIBS:hscdann015pa2a5
 LIBS:AP2112K-3.3TRG1
 LIBS:lm1117_edited
 LIBS:MF-MSMF050-2
+LIBS:mcp2515
+LIBS:mcp2551
+LIBS:cesd5v0ap
 LIBS:Pressure Scanner Board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -341,8 +344,8 @@ Text GLabel 9600 5950 2    39   Input ~ 0
 TX_LED
 Text GLabel 8950 5950 2    39   Input ~ 0
 RX_LED
-Text Notes 1800 5800 0    49   ~ 0
-SWD Debug Header
+Text Notes 1875 5800 0    49   ~ 0
+SWD Header
 $Comp
 L C_Small C?
 U 1 1 5C5DDD20
@@ -541,7 +544,7 @@ Text Notes 10600 7650 0    47   ~ 0
 Text Notes 7000 7100 0    79   ~ 0
 Author: Matthew Cox\nOrganization: University of Connecticut Formula SAE
 Text Notes 4000 6825 0    60   ~ 0
-To-Do List:\n1. Determine SERCOM Pinouts + GPIO pins\n2. Update USB connector and add power connector\n3. Board Layout + Design Case\n4. Create Board BOM
+To-Do List:\n1. Determine SERCOM Pinouts + GPIO pins\n2. Update USB connector and add power connector\n3. Determine CAN Crystal Oscillator + Caps\n4. Board Layout + Design Case\n5. Create Board BOM
 $Comp
 L SAMD21G18A-AU U?
 U 1 1 5C632975
@@ -757,4 +760,10 @@ Wire Wire Line
 Wire Wire Line
 	6925 3400 6100 3400
 Connection ~ 7250 3600
+$Sheet
+S 10100 1750 500  175 
+U 5C647E2E
+F0 "CAN Bus" 59
+F1 "CAN-BUS.sch" 59
+$EndSheet
 $EndSCHEMATC

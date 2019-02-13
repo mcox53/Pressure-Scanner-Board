@@ -1,0 +1,445 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:apa102c
+LIBS:ATSAMD21G18A-AU
+LIBS:B3FS-4005P
+LIBS:cortex_debug
+LIBS:lm2734
+LIBS:prtr5v0u2x
+LIBS:samd21g18a-au
+LIBS:dlhr-l10d-e1bd-c-nav8
+LIBS:hscdann015pa2a5
+LIBS:AP2112K-3.3TRG1
+LIBS:lm1117_edited
+LIBS:MF-MSMF050-2
+LIBS:mcp2515
+LIBS:mcp2551
+LIBS:cesd5v0ap
+LIBS:Pressure Scanner Board-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 7000 7100 0    79   ~ 0
+Author: Matthew Cox\nOrganization: University of Connecticut Formula SAE
+Text Notes 7325 7500 0    49   ~ 0
+Pressure Scanner Board - CAN Bus Interface
+Text Notes 8125 7650 0    49   ~ 0
+2/8/19
+Text Notes 10575 7650 0    49   ~ 0
+0
+Text Notes 5275 2125 0    79   ~ 0
+CAN Controller + Transceiver
+$Comp
+L MCP2515 U?
+U 1 1 5C6487A3
+P 4150 3800
+F 0 "U?" H 4150 3175 49  0000 C CNN
+F 1 "MCP2515" H 4150 4500 49  0000 C CNN
+F 2 "" H 2950 3675 49  0001 C CNN
+F 3 "" H 2950 3675 49  0001 C CNN
+	1    4150 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP2551 U?
+U 1 1 5C6487CB
+P 7600 3775
+F 0 "U?" H 7600 3450 49  0000 C CNN
+F 1 "MCP2551" H 7600 4100 49  0000 C CNN
+F 2 "" H 7600 3775 49  0001 C CNN
+F 3 "" H 7600 3775 49  0001 C CNN
+	1    7600 3775
+	1    0    0    -1  
+$EndComp
+Text GLabel 3350 3275 0    39   Input ~ 0
+TXCAN
+Text GLabel 3350 3400 0    39   Input ~ 0
+RXCAN
+$Comp
+L GND #PWR?
+U 1 1 5C648816
+P 3425 4350
+F 0 "#PWR?" H 3425 4100 50  0001 C CNN
+F 1 "GND" H 3425 4200 50  0000 C CNN
+F 2 "" H 3425 4350 50  0001 C CNN
+F 3 "" H 3425 4350 50  0001 C CNN
+	1    3425 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3425 4350 3425 4275
+Wire Wire Line
+	3425 4275 3550 4275
+$Comp
+L +3.3V #PWR?
+U 1 1 5C6489C6
+P 4875 2900
+F 0 "#PWR?" H 4875 2750 50  0001 C CNN
+F 1 "+3.3V" H 4875 3040 50  0000 C CNN
+F 2 "" H 4875 2900 50  0001 C CNN
+F 3 "" H 4875 2900 50  0001 C CNN
+	1    4875 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3275 3550 3275
+Wire Wire Line
+	3350 3400 3550 3400
+NoConn ~ 3550 3525
+NoConn ~ 3550 3650
+NoConn ~ 3550 3775
+NoConn ~ 3550 3900
+NoConn ~ 4750 4150
+NoConn ~ 4750 4275
+$Comp
+L R_Small R?
+U 1 1 5C648A47
+P 5050 3125
+F 0 "R?" H 5080 3145 50  0000 L CNN
+F 1 "10K" H 5080 3085 50  0000 L CNN
+F 2 "" H 5050 3125 50  0001 C CNN
+F 3 "" H 5050 3125 50  0001 C CNN
+	1    5050 3125
+	1    0    0    -1  
+$EndComp
+Text GLabel 5050 3525 2    39   Input ~ 0
+SS_CAN
+Text GLabel 5050 3650 2    39   Input ~ 0
+MISO_CAN
+Text GLabel 5050 3900 2    39   Input ~ 0
+SCLK_CAN
+Text GLabel 5050 3775 2    39   Input ~ 0
+MOSI_CAN
+Wire Wire Line
+	4750 3525 5050 3525
+Wire Wire Line
+	4750 3650 5050 3650
+Wire Wire Line
+	4750 3775 5050 3775
+Wire Wire Line
+	5050 3900 4750 3900
+Text GLabel 5050 4025 2    39   Input ~ 0
+CAN_INT
+Wire Wire Line
+	5050 4025 4750 4025
+$Comp
+L Crystal Y?
+U 1 1 5C648B55
+P 2850 4100
+F 0 "Y?" V 2900 4275 50  0000 C CNN
+F 1 "16MHz" V 2850 3850 50  0000 C CNN
+F 2 "" H 2850 4100 50  0001 C CNN
+F 3 "" H 2850 4100 50  0001 C CNN
+	1    2850 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3550 4025 3150 4025
+Wire Wire Line
+	3150 4025 3150 3900
+Wire Wire Line
+	3150 3900 2425 3900
+Wire Wire Line
+	2850 3900 2850 3950
+Wire Wire Line
+	2850 4250 2850 4300
+Wire Wire Line
+	2425 4300 3150 4300
+Wire Wire Line
+	3150 4300 3150 4150
+Wire Wire Line
+	3150 4150 3550 4150
+$Comp
+L C_Small C?
+U 1 1 5C648C45
+P 2325 3900
+F 0 "C?" H 2335 3970 50  0000 L CNN
+F 1 "TBD" H 2335 3820 50  0000 L CNN
+F 2 "" H 2325 3900 50  0001 C CNN
+F 3 "" H 2325 3900 50  0001 C CNN
+	1    2325 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5C648C82
+P 2325 4300
+F 0 "C?" H 2335 4370 50  0000 L CNN
+F 1 "TBD" H 2335 4220 50  0000 L CNN
+F 2 "" H 2325 4300 50  0001 C CNN
+F 3 "" H 2325 4300 50  0001 C CNN
+	1    2325 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C648CB1
+P 2050 4100
+F 0 "#PWR?" H 2050 3850 50  0001 C CNN
+F 1 "GND" H 2050 3950 50  0000 C CNN
+F 2 "" H 2050 4100 50  0001 C CNN
+F 3 "" H 2050 4100 50  0001 C CNN
+	1    2050 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 4100 2150 4100
+Wire Wire Line
+	2150 3900 2150 4300
+Wire Wire Line
+	2150 3900 2225 3900
+Connection ~ 2850 3900
+Connection ~ 2850 4300
+Wire Wire Line
+	2150 4300 2225 4300
+Connection ~ 2150 4100
+Text Notes 7075 2975 0    39   ~ 0
+Transceiver operated at 5V to maintain\nuniformity w/ rest of car. TXD and RXD are compatible\nwith 3.3V logic when powered with 5V.
+Text GLabel 6975 3575 0    39   Input ~ 0
+TXCAN
+Text GLabel 6975 3950 0    39   Input ~ 0
+RXCAN
+Wire Wire Line
+	6975 3950 7125 3950
+Wire Wire Line
+	6975 3575 7125 3575
+$Comp
+L GND #PWR?
+U 1 1 5C649298
+P 6975 3700
+F 0 "#PWR?" H 6975 3450 50  0001 C CNN
+F 1 "GND" H 6975 3550 50  0000 C CNN
+F 2 "" H 6975 3700 50  0001 C CNN
+F 3 "" H 6975 3700 50  0001 C CNN
+	1    6975 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6975 3700 7125 3700
+$Comp
+L +5V #PWR?
+U 1 1 5C6492E1
+P 6500 3675
+F 0 "#PWR?" H 6500 3525 50  0001 C CNN
+F 1 "+5V" H 6500 3815 50  0000 C CNN
+F 2 "" H 6500 3675 50  0001 C CNN
+F 3 "" H 6500 3675 50  0001 C CNN
+	1    6500 3675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3675 6500 3875
+Wire Wire Line
+	6500 3825 7125 3825
+$Comp
+L R_Small R?
+U 1 1 5C64939D
+P 8250 3575
+F 0 "R?" V 8400 3550 50  0000 L CNN
+F 1 "17K" V 8325 3500 50  0000 L CNN
+F 2 "" H 8250 3575 50  0001 C CNN
+F 3 "" H 8250 3575 50  0001 C CNN
+	1    8250 3575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C649485
+P 8450 3575
+F 0 "#PWR?" H 8450 3325 50  0001 C CNN
+F 1 "GND" H 8450 3425 50  0000 C CNN
+F 2 "" H 8450 3575 50  0001 C CNN
+F 3 "" H 8450 3575 50  0001 C CNN
+	1    8450 3575
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8075 3575 8150 3575
+Wire Wire Line
+	8350 3575 8450 3575
+NoConn ~ 8075 3950
+$Comp
+L CESD5V0AP D?
+U 1 1 5C649B06
+P 8400 4275
+F 0 "D?" H 8600 4335 39  0000 C CNN
+F 1 "CESD5V0AP" H 8725 4390 39  0000 C CNN
+F 2 "" H 8400 4275 39  0001 C CNN
+F 3 "" H 8400 4275 39  0001 C CNN
+	1    8400 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C649B47
+P 8400 4550
+F 0 "#PWR?" H 8400 4300 50  0001 C CNN
+F 1 "GND" H 8400 4400 50  0000 C CNN
+F 2 "" H 8400 4550 50  0001 C CNN
+F 3 "" H 8400 4550 50  0001 C CNN
+	1    8400 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 4550 8400 4490
+Wire Wire Line
+	8320 4010 8320 3825
+Wire Wire Line
+	8075 3825 8950 3825
+Wire Wire Line
+	8480 4010 8480 3700
+Wire Wire Line
+	8480 3700 8075 3700
+$Comp
+L R R?
+U 1 1 5C649D1F
+P 9175 3750
+F 0 "R?" V 9255 3750 50  0000 C CNN
+F 1 "120" V 9175 3750 50  0000 C CNN
+F 2 "" V 9105 3750 50  0001 C CNN
+F 3 "" H 9175 3750 50  0001 C CNN
+	1    9175 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8475 3700 8950 3700
+Wire Wire Line
+	8950 3700 8950 3475
+Wire Wire Line
+	8950 3475 9425 3475
+Wire Wire Line
+	9175 3475 9175 3600
+Connection ~ 8475 3700
+Wire Wire Line
+	9175 3900 9175 4025
+Wire Wire Line
+	8950 4025 9425 4025
+Wire Wire Line
+	8950 3825 8950 4025
+Connection ~ 8320 3825
+Text GLabel 9600 3700 2    39   Input ~ 0
+CANH
+Wire Wire Line
+	9425 3475 9425 3700
+Connection ~ 9175 3475
+Wire Wire Line
+	9425 3700 9600 3700
+Text GLabel 9600 3800 2    39   Input ~ 0
+CANL
+Wire Wire Line
+	9600 3800 9425 3800
+Wire Wire Line
+	9425 3800 9425 4025
+Connection ~ 9175 4025
+Text Notes 8950 3300 0    39   ~ 0
+Optional 120 Ohm\nTermination Resistor
+Text Notes 8000 4875 0    39   ~ 0
+Transient Voltage Protection
+$Comp
+L C_Small C?
+U 1 1 5C64AAF4
+P 6500 3975
+F 0 "C?" H 6400 4050 50  0000 L CNN
+F 1 "100nF" H 6250 3900 50  0000 L CNN
+F 2 "" H 6500 3975 50  0001 C CNN
+F 3 "" H 6500 3975 50  0001 C CNN
+	1    6500 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C64ABB3
+P 6500 4125
+F 0 "#PWR?" H 6500 3875 50  0001 C CNN
+F 1 "GND" H 6500 3975 50  0000 C CNN
+F 2 "" H 6500 4125 50  0001 C CNN
+F 3 "" H 6500 4125 50  0001 C CNN
+	1    6500 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4125 6500 4075
+Connection ~ 6500 3825
+$Comp
+L C_Small C?
+U 1 1 5C64AE69
+P 5300 3125
+F 0 "C?" H 5310 3195 50  0000 L CNN
+F 1 "100nF" H 5310 3045 50  0000 L CNN
+F 2 "" H 5300 3125 50  0001 C CNN
+F 3 "" H 5300 3125 50  0001 C CNN
+	1    5300 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4875 2900 4875 3275
+Wire Wire Line
+	4875 3275 4750 3275
+Wire Wire Line
+	4875 2950 5300 2950
+Wire Wire Line
+	5050 2950 5050 3025
+Connection ~ 4875 2950
+Wire Wire Line
+	5050 3225 5050 3400
+Wire Wire Line
+	5050 3400 4750 3400
+Wire Wire Line
+	5300 2950 5300 3025
+Connection ~ 5050 2950
+$Comp
+L GND #PWR?
+U 1 1 5C64B180
+P 5300 3275
+F 0 "#PWR?" H 5300 3025 50  0001 C CNN
+F 1 "GND" H 5300 3125 50  0000 C CNN
+F 2 "" H 5300 3275 50  0001 C CNN
+F 3 "" H 5300 3275 50  0001 C CNN
+	1    5300 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 3275 5300 3225
+$EndSCHEMATC

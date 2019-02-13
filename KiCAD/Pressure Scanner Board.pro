@@ -1,4 +1,4 @@
-update=2/12/2019 11:08:49 AM
+update=2/13/2019 4:29:14 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -76,3 +76,6 @@ LibName44=Libraries/hscdann015pa2a5
 LibName45=Libraries/AP2112K-3.3TRG1
 LibName46=Libraries/lm1117_edited
 LibName47=Libraries/MF-MSMF050-2
+LibName48=Libraries/mcp2515
+LibName49=Libraries/mcp2551
+LibName50=Libraries/cesd5v0ap
