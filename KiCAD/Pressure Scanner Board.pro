@@ -1,4 +1,4 @@
-update=2/13/2019 4:29:14 PM
+update=2/14/2019 5:53:46 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -79,3 +79,14 @@ LibName47=Libraries/MF-MSMF050-2
 LibName48=Libraries/mcp2515
 LibName49=Libraries/mcp2551
 LibName50=Libraries/cesd5v0ap
+LibName51=Libraries/usb_micro_b
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=./
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
