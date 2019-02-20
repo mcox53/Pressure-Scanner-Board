@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name DLHR-L10D-E1BD-C-NAV8)(type KiCad)(uri "$(KIPRJMOD)/Libraries/DLHR-L10D-E1BD-C-NAV8.pretty")(options "")(descr ""))
+  (lib (name HSCDANN015PA2A5)(type KiCad)(uri "$(KIPRJMOD)/Libraries/HSCDANN015PA2A5.pretty")(options "")(descr ""))
+)
