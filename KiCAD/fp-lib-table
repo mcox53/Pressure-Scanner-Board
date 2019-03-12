@@ -1,4 +1,11 @@
 (fp_lib_table
   (lib (name DLHR-L10D-E1BD-C-NAV8)(type KiCad)(uri "$(KIPRJMOD)/Libraries/DLHR-L10D-E1BD-C-NAV8.pretty")(options "")(descr ""))
   (lib (name HSCDANN015PA2A5)(type KiCad)(uri "$(KIPRJMOD)/Libraries/HSCDANN015PA2A5.pretty")(options "")(descr ""))
+  (lib (name MS1V-T1K)(type KiCad)(uri "$(KIPRJMOD)/Libraries/MS1V-T1K.pretty")(options "")(descr ""))
+  (lib (name CMR200T)(type KiCad)(uri "$(KIPRJMOD)/Libraries/CMR200T.pretty")(options "")(descr ""))
+  (lib (name 9B-16.000MEEJ-B)(type KiCad)(uri "$(KIPRJMOD)/Libraries/9B-16.000MEEJ-B.pretty")(options "")(descr ""))
+  (lib (name ATSAMD21G18A-AU)(type Legacy)(uri "$(KIPRJMOD)/Libraries/ATSAMD21G18A-AU/ATSAMD21G18A-AU.mod")(options "")(descr ""))
+  (lib (name FSMCTTR)(type KiCad)(uri C:/Users/Matt/Dropbox/Documents/FSAE/PCB/SAMD21-Dev-Board/KiCAD/FSMCTTR.pretty)(options "")(descr ""))
+  (lib (name 10118192-0001LF)(type KiCad)(uri C:/Users/Matt/Dropbox/Documents/FSAE/PCB/SAMD21-Dev-Board/KiCAD/10118192-0001LF.pretty)(options "")(descr ""))
+  (lib (name 10104110-0001LF)(type KiCad)(uri "$(KIPRJMOD)/Libraries/10104110-0001LF.pretty")(options "")(descr ""))
 )
