@@ -508,8 +508,8 @@ Wire Notes Line
 	4325 1400 4325 5325
 Text Notes 4875 5525 0    59   ~ 0
 Optional Expansion Slots
-Text Notes 8325 1275 0    59   ~ 0
-0 - 15 PSI Absolute Pressure Sensor
+Text Notes 8550 1275 0    59   ~ 0
+0 - 15 PSIA Pressure Sensor
 $Comp
 L HSCDANN015PA2A5 U4
 U 1 1 5C62EF78
