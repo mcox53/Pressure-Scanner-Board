@@ -347,6 +347,17 @@ F 3 "" H 4700 3550 50  0001 C CNN
 	1    4700 3550
 	1    0    0    -1  
 $EndComp
+$Comp
+L VBUS #PWR?
+U 1 1 5C938C3A
+P 4675 2900
+F 0 "#PWR?" H 4675 2750 50  0001 C CNN
+F 1 "VBUS" H 4675 3050 50  0000 C CNN
+F 2 "" H 4675 2900 50  0001 C CNN
+F 3 "" H 4675 2900 50  0001 C CNN
+	1    4675 2900
+	1    0    0    -1  
+$EndComp
 Connection ~ 6575 4700
 Wire Wire Line
 	6575 4700 6575 4600
@@ -446,4 +457,7 @@ Wire Wire Line
 	4700 4600 4900 4600
 Wire Wire Line
 	5325 4800 4700 4800
+Wire Wire Line
+	4675 2900 4675 3000
+Connection ~ 4675 3000
 $EndSCHEMATC
