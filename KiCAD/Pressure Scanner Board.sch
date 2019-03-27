@@ -771,4 +771,8 @@ NoConn ~ 6100 2500
 NoConn ~ 6100 1900
 Entry Wire Line
 	14375 8250 14475 8350
+Text Label 2650 1800 0    60   ~ 0
+OSC+
+Text Label 2650 1900 0    60   ~ 0
+OSC-
 $EndSCHEMATC
