@@ -303,22 +303,7 @@ F 3 "" H 5325 4600 50  0001 C CNN
 	1    5325 4600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Conn_01x04 J3
-U 1 1 5C661C12
-P 4500 4600
-F 0 "J3" H 4500 4800 50  0000 C CNN
-F 1 "Binder 709 Female Panel Mount" H 4500 4300 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4500 4600 50  0001 C CNN
-F 3 "" H 4500 4600 50  0001 C CNN
-	1    4500 4600
-	-1   0    0    -1  
-$EndComp
-Text GLabel 4900 4500 2    39   Input ~ 0
-CANH
-Text GLabel 4900 4600 2    39   Input ~ 0
-CANL
-Text Notes 4475 4275 0    49   ~ 0
+Text Notes 4375 4295 0    49   ~ 0
 Binder Series 709 Female \nPanel Mount Connector
 $Comp
 L USB_Micro_B J2
@@ -383,8 +368,6 @@ Wire Wire Line
 	5475 4950 5475 5050
 Wire Wire Line
 	5925 5100 5925 5000
-Wire Wire Line
-	4700 4700 5625 4700
 Wire Wire Line
 	6225 4800 6275 4800
 Wire Wire Line
@@ -452,12 +435,21 @@ Wire Wire Line
 Wire Wire Line
 	4400 3100 4700 3100
 Wire Wire Line
-	4700 4500 4900 4500
-Wire Wire Line
-	4700 4600 4900 4600
-Wire Wire Line
-	5325 4800 4700 4800
-Wire Wire Line
 	4675 2900 4675 3000
 Connection ~ 4675 3000
+$Comp
+L Conn_01x02 J3
+U 1 1 5C9D06F2
+P 4845 4700
+F 0 "J3" H 4845 4800 50  0000 C CNN
+F 1 "Battery Headers" H 4845 4500 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4845 4700 50  0001 C CNN
+F 3 "" H 4845 4700 50  0001 C CNN
+	1    4845 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5045 4700 5625 4700
+Wire Wire Line
+	5325 4800 5045 4800
 $EndSCHEMATC

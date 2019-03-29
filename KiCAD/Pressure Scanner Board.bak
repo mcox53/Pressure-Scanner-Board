@@ -294,14 +294,10 @@ F 3 "" H 8550 1650 50  0001 C CNN
 $EndComp
 Text GLabel 8350 1850 0    39   Input ~ 0
 RESETN
-Text GLabel 6350 1800 2    39   Input ~ 0
-RX_LED
 Text GLabel 6350 2000 2    39   Input ~ 0
 SWDIO
 Text GLabel 6350 2100 2    39   Input ~ 0
 SWCLK
-Text GLabel 6350 2700 2    39   Input ~ 0
-TX_LED
 $Comp
 L Cortex_Debug J1
 U 1 1 5C5DDD18
@@ -613,13 +609,9 @@ Wire Wire Line
 Wire Wire Line
 	8350 1850 8700 1850
 Wire Wire Line
-	6100 1800 6350 1800
-Wire Wire Line
 	6100 2000 6350 2000
 Wire Wire Line
 	6100 2100 6350 2100
-Wire Wire Line
-	6100 2700 6350 2700
 Wire Wire Line
 	2700 6150 2900 6150
 Wire Wire Line
@@ -771,4 +763,8 @@ NoConn ~ 6100 2500
 NoConn ~ 6100 1900
 Entry Wire Line
 	14375 8250 14475 8350
+Text Label 2650 1800 0    60   ~ 0
+OSC+
+Text Label 2650 1900 0    60   ~ 0
+OSC-
 $EndSCHEMATC
