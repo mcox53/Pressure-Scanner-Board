@@ -336,15 +336,11 @@ Wire Wire Line
 Wire Wire Line
 	8950 3825 8950 4025
 Connection ~ 8320 3825
-Text GLabel 9600 3700 2    39   Input ~ 0
-CANH
 Wire Wire Line
 	9425 3475 9425 3700
 Connection ~ 9175 3475
 Wire Wire Line
 	9425 3700 9600 3700
-Text GLabel 9600 3800 2    39   Input ~ 0
-CANL
 Wire Wire Line
 	9600 3800 9425 3800
 Wire Wire Line
@@ -449,4 +445,17 @@ Text Label 8845 3825 0    60   ~ 0
 -
 Text Label 3245 4150 0    60   ~ 0
 OSC-
+$Comp
+L Conn_01x02 J4
+U 1 1 5C9D17FA
+P 9800 3700
+F 0 "J4" H 9800 3800 50  0000 C CNN
+F 1 "Can Header" H 9800 3500 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 9800 3700 50  0001 C CNN
+F 3 "" H 9800 3700 50  0001 C CNN
+	1    9800 3700
+	1    0    0    -1  
+$EndComp
+Text Notes 9930 3780 0    39   ~ 0
+Pin Headers -> Binder Series 709
 $EndSCHEMATC
