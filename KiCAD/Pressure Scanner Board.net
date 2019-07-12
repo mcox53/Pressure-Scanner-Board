@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/Users/Matt/Dropbox/Documents/FSAE/PCB/Pressure Scanner Board/KiCAD/Pressure Scanner Board.sch")
-    (date "7/12/2019 9:29:56 AM")
+    (date "7/12/2019 10:18:23 AM")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -960,12 +960,12 @@
       (node (ref F1) (pin 1))
       (node (ref Q1) (pin 3))
       (node (ref C9) (pin 1)))
-    (net (code 52) (name CANL-)
+    (net (code 52) (name CAN-)
       (node (ref D3) (pin 2))
       (node (ref J3) (pin 4))
       (node (ref U13) (pin 6))
       (node (ref R12) (pin 2)))
-    (net (code 53) (name CANH+)
+    (net (code 53) (name CAN+)
       (node (ref J3) (pin 3))
       (node (ref D3) (pin 1))
       (node (ref U13) (pin 7))

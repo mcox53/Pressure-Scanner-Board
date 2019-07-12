@@ -442,8 +442,10 @@ Text Label 8845 3825 0    60   ~ 0
 Text Label 3245 4150 0    60   ~ 0
 OSC-
 Text GLabel 9600 3700 2    39   Input ~ 0
-CANH+
+CAN+
 Text GLabel 9600 3800 2    39   Input ~ 0
-CANL-
+CAN-
 NoConn ~ 4750 4025
+Text Notes 9600 4050 0    39   ~ 0
+Named this way so pcbnew\nacknowledges differential pair\n
 $EndSCHEMATC
