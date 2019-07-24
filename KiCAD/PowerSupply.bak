@@ -453,9 +453,9 @@ Wire Wire Line
 Wire Wire Line
 	5325 4800 4600 4800
 Text GLabel 4750 4900 2    39   Input ~ 0
-CANH+
+CAN+
 Text GLabel 4750 5000 2    39   Input ~ 0
-CANL-
+CAN-
 Wire Wire Line
 	4750 4900 4600 4900
 Wire Wire Line

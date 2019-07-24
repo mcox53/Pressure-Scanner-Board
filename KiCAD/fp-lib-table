@@ -8,4 +8,5 @@
   (lib (name FSMCTTR)(type KiCad)(uri C:/Users/Matt/Dropbox/Documents/FSAE/PCB/SAMD21-Dev-Board/KiCAD/FSMCTTR.pretty)(options "")(descr ""))
   (lib (name 10118192-0001LF)(type KiCad)(uri C:/Users/Matt/Dropbox/Documents/FSAE/PCB/SAMD21-Dev-Board/KiCAD/10118192-0001LF.pretty)(options "")(descr ""))
   (lib (name 10104110-0001LF)(type KiCad)(uri "$(KIPRJMOD)/Libraries/10104110-0001LF.pretty")(options "")(descr ""))
+  (lib (name Libraries)(type KiCad)(uri "$(KIPRJMOD)/Libraries.pretty")(options "")(descr ""))
 )
