@@ -1,4 +1,4 @@
-update=2/14/2019 5:53:46 PM
+update=10/6/2019 8:47:13 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,61 +25,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=switches
-LibName4=relays
-LibName5=motors
-LibName6=transistors
-LibName7=conn
-LibName8=linear
-LibName9=regul
-LibName10=74xx
-LibName11=cmos4000
-LibName12=adc-dac
-LibName13=memory
-LibName14=xilinx
-LibName15=microcontrollers
-LibName16=dsp
-LibName17=microchip
-LibName18=analog_switches
-LibName19=motorola
-LibName20=texas
-LibName21=intel
-LibName22=audio
-LibName23=interface
-LibName24=digital-audio
-LibName25=philips
-LibName26=display
-LibName27=cypress
-LibName28=siliconi
-LibName29=opto
-LibName30=atmel
-LibName31=contrib
-LibName32=valves
-LibName33=ATSAMD21G18A-AU Footprint Symbol/ATSAMD21G18A-AU
-LibName34=ATSAMD21G18A-AU Schematic Symbol/ATSAMD21G18A-AU
-LibName35=C:/Users/Matt/Dropbox/Documents/FSAE/PCB/DashboardPCB/Custom Libraries/samd21g18a-au
-LibName36=Libraries/apa102c
-LibName37=Libraries/ATSAMD21G18A-AU
-LibName38=Libraries/B3FS-4005P
-LibName39=Libraries/cortex_debug
-LibName40=Libraries/lm2734
-LibName41=Libraries/prtr5v0u2x
-LibName42=Libraries/samd21g18a-au
-LibName43=Libraries/dlhr-l10d-e1bd-c-nav8
-LibName44=Libraries/hscdann015pa2a5
-LibName45=Libraries/AP2112K-3.3TRG1
-LibName46=Libraries/lm1117_edited
-LibName47=Libraries/MF-MSMF050-2
-LibName48=Libraries/mcp2515
-LibName49=Libraries/mcp2551
-LibName50=Libraries/cesd5v0ap
-LibName51=Libraries/usb_micro_b
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -90,3 +35,6 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[eeschema]
+version=1
+LibDir=

@@ -1,6 +1,54 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:apa102c
+LIBS:ATSAMD21G18A-AU
+LIBS:B3FS-4005P
+LIBS:cortex_debug
+LIBS:lm2734
+LIBS:prtr5v0u2x
+LIBS:samd21g18a-au
+LIBS:dlhr-l10d-e1bd-c-nav8
+LIBS:hscdann015pa2a5
+LIBS:AP2112K-3.3TRG1
+LIBS:lm1117_edited
+LIBS:MF-MSMF050-2
+LIBS:mcp2515
+LIBS:mcp2551
+LIBS:cesd5v0ap
+LIBS:usb_micro_b
 LIBS:Pressure Scanner Board-cache
-EELAYER 30 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +63,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR020
+L GND #PWR020
 U 1 1 5C631B54
 P 5925 5100
 F 0 "#PWR020" H 5925 4850 50  0001 C CNN
@@ -26,7 +74,7 @@ F 3 "" H 5925 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C12
+L CP1_Small C12
 U 1 1 5C631B5A
 P 5475 4850
 F 0 "C12" H 5485 4920 50  0000 L CNN
@@ -37,7 +85,7 @@ F 3 "" H 5475 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C13
+L CP1_Small C13
 U 1 1 5C631B61
 P 6425 4850
 F 0 "C13" H 6435 4920 50  0000 L CNN
@@ -48,7 +96,7 @@ F 3 "" H 6425 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C14
+L C_Small C14
 U 1 1 5C631B68
 P 6725 4850
 F 0 "C14" H 6735 4920 50  0000 L CNN
@@ -59,7 +107,7 @@ F 3 "" H 6725 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR021
+L +5V #PWR021
 U 1 1 5C631B6F
 P 6575 4600
 F 0 "#PWR021" H 6575 4450 50  0001 C CNN
@@ -70,7 +118,7 @@ F 3 "" H 6575 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MF-MSMF050-2:500mA F1
+L 500mA F1
 U 1 1 5C6327BB
 P 5200 3000
 F 0 "F1" V 5100 3000 50  0000 C CNN
@@ -81,7 +129,7 @@ F 3 "" H 5200 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R5
+L R R5
 U 1 1 5C6327C2
 P 5500 2350
 F 0 "R5" V 5580 2350 50  0000 C CNN
@@ -92,7 +140,7 @@ F 3 "" H 5500 2350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR022
+L GND #PWR022
 U 1 1 5C6327C9
 P 5500 2600
 F 0 "#PWR022" H 5500 2350 50  0001 C CNN
@@ -105,7 +153,7 @@ $EndComp
 Text Notes 5750 4425 0    39   ~ 0
 VIN: 7-15V
 $Comp
-L Device:C_Small C11
+L C_Small C11
 U 1 1 5C6327DE
 P 7225 3200
 F 0 "C11" H 7235 3270 50  0000 L CNN
@@ -116,7 +164,7 @@ F 3 "" H 7225 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L GND #PWR023
 U 1 1 5C6327E5
 P 6750 3600
 F 0 "#PWR023" H 6750 3350 50  0001 C CNN
@@ -127,7 +175,7 @@ F 3 "" H 6750 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C10
+L C_Small C10
 U 1 1 5C6327EB
 P 6200 3200
 F 0 "C10" H 6210 3270 50  0000 L CNN
@@ -138,7 +186,7 @@ F 3 "" H 6200 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR024
+L +3.3V #PWR024
 U 1 1 5C6327F2
 P 7400 2900
 F 0 "#PWR024" H 7400 2750 50  0001 C CNN
@@ -149,7 +197,7 @@ F 3 "" H 7400 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C9
+L C_Small C9
 U 1 1 5C6327F8
 P 5450 3200
 F 0 "C9" H 5460 3270 50  0000 L CNN
@@ -160,7 +208,7 @@ F 3 "" H 5450 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR025
+L GND #PWR025
 U 1 1 5C6327FF
 P 5450 3500
 F 0 "#PWR025" H 5450 3250 50  0001 C CNN
@@ -171,7 +219,7 @@ F 3 "" H 5450 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR026
+L +5V #PWR026
 U 1 1 5C632805
 P 6300 2850
 F 0 "#PWR026" H 6300 2700 50  0001 C CNN
@@ -182,7 +230,7 @@ F 3 "" H 6300 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_PMOS_GSD Q1
+L Q_PMOS_GSD Q1
 U 1 1 5C632831
 P 5850 2900
 F 0 "Q1" V 6050 2950 50  0000 L CNN
@@ -193,7 +241,7 @@ F 3 "" H 5850 2900 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L power:GND #PWR027
+L GND #PWR027
 U 1 1 5C63283C
 P 5325 4950
 F 0 "#PWR027" H 5325 4700 50  0001 C CNN
@@ -204,7 +252,7 @@ F 3 "" H 5325 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L AP2112K-3.3TRG1:AP2112K-3.3 U2
+L AP2112K-3.3 U2
 U 1 1 5C6327D7
 P 6750 3100
 F 0 "U2" H 6550 3325 50  0000 L CNN
@@ -215,7 +263,7 @@ F 3 "" H 6750 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L lm1117_edited:LM1117 U3
+L LM1117 U3
 U 1 1 5C6336AD
 P 5925 4700
 F 0 "U3" H 5775 4825 50  0000 C CNN
@@ -226,7 +274,7 @@ F 3 "" H 5925 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR028
+L +5V #PWR028
 U 1 1 5C633AAC
 P 5500 2125
 F 0 "#PWR028" H 5500 1975 50  0001 C CNN
@@ -245,7 +293,7 @@ Text Notes 8150 7650 0    49   ~ 0
 Text Notes 10575 7650 0    49   ~ 0
 0
 $Comp
-L power:+BATT #PWR029
+L +BATT #PWR029
 U 1 1 5C64B882
 P 5325 4600
 F 0 "#PWR029" H 5325 4450 50  0001 C CNN
@@ -258,7 +306,7 @@ $EndComp
 Text Notes 4375 4295 0    49   ~ 0
 Flying leads terminate\nto 0.1" pin headers
 $Comp
-L usb_micro_b:USB_Micro_B J2
+L USB_Micro_B J2
 U 1 1 5C661C22
 P 4200 3200
 F 0 "J2" H 4200 3500 50  0000 C CNN
@@ -274,7 +322,7 @@ Text GLabel 4700 3200 2    39   Input ~ 0
 USB_D+
 NoConn ~ 4400 3300
 $Comp
-L power:GND #PWR030
+L GND #PWR030
 U 1 1 5C661C2D
 P 4700 3550
 F 0 "#PWR030" H 4700 3300 50  0001 C CNN
@@ -285,7 +333,7 @@ F 3 "" H 4700 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VBUS #PWR031
+L VBUS #PWR031
 U 1 1 5C938C3A
 P 4675 2900
 F 0 "#PWR031" H 4675 2750 50  0001 C CNN
@@ -390,7 +438,7 @@ Wire Wire Line
 	4675 2900 4675 3000
 Connection ~ 4675 3000
 $Comp
-L conn:Conn_01x04 J3
+L Conn_01x04 J3
 U 1 1 5D288B5A
 P 4400 4800
 F 0 "J3" H 4400 5000 50  0000 C CNN

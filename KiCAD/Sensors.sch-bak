@@ -1,6 +1,54 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:apa102c
+LIBS:ATSAMD21G18A-AU
+LIBS:B3FS-4005P
+LIBS:cortex_debug
+LIBS:lm2734
+LIBS:prtr5v0u2x
+LIBS:samd21g18a-au
+LIBS:dlhr-l10d-e1bd-c-nav8
+LIBS:hscdann015pa2a5
+LIBS:AP2112K-3.3TRG1
+LIBS:lm1117_edited
+LIBS:MF-MSMF050-2
+LIBS:mcp2515
+LIBS:mcp2551
+LIBS:cesd5v0ap
+LIBS:usb_micro_b
 LIBS:Pressure Scanner Board-cache
-EELAYER 30 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +63,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+3.3V #PWR032
+L +3.3V #PWR032
 U 1 1 5C62E178
 P 3475 1650
 F 0 "#PWR032" H 3475 1500 50  0001 C CNN
@@ -30,7 +78,7 @@ Wire Wire Line
 Wire Wire Line
 	3475 1850 3825 1850
 $Comp
-L power:GND #PWR033
+L GND #PWR033
 U 1 1 5C62E1C6
 P 3725 1725
 F 0 "#PWR033" H 3725 1475 50  0001 C CNN
@@ -51,7 +99,7 @@ SCLK_0
 Wire Wire Line
 	3675 2100 3825 2100
 $Comp
-L dlhr-l10d-e1bd-c-nav8:DLHR-L10D-E1BD-C-NAV8 U5
+L DLHR-L10D-E1BD-C-NAV8 U5
 U 1 1 5C62E304
 P 4375 1925
 F 0 "U5" H 4375 1600 60  0000 C CNN
@@ -70,7 +118,7 @@ SS_0
 Wire Wire Line
 	5125 1725 4900 1725
 $Comp
-L power:+3.3V #PWR034
+L +3.3V #PWR034
 U 1 1 5C62E3C1
 P 3475 2600
 F 0 "#PWR034" H 3475 2450 50  0001 C CNN
@@ -85,7 +133,7 @@ Wire Wire Line
 Wire Wire Line
 	3475 2800 3825 2800
 $Comp
-L power:GND #PWR035
+L GND #PWR035
 U 1 1 5C62E3C9
 P 3725 2675
 F 0 "#PWR035" H 3725 2425 50  0001 C CNN
@@ -106,7 +154,7 @@ SCLK_0
 Wire Wire Line
 	3675 3050 3825 3050
 $Comp
-L dlhr-l10d-e1bd-c-nav8:DLHR-L10D-E1BD-C-NAV8 U7
+L DLHR-L10D-E1BD-C-NAV8 U7
 U 1 1 5C62E3D4
 P 4375 2875
 F 0 "U7" H 4375 2550 60  0000 C CNN
@@ -125,7 +173,7 @@ SS_1
 Wire Wire Line
 	5125 2675 4900 2675
 $Comp
-L power:+3.3V #PWR036
+L +3.3V #PWR036
 U 1 1 5C62E42E
 P 3475 3550
 F 0 "#PWR036" H 3475 3400 50  0001 C CNN
@@ -140,7 +188,7 @@ Wire Wire Line
 Wire Wire Line
 	3475 3750 3825 3750
 $Comp
-L power:GND #PWR037
+L GND #PWR037
 U 1 1 5C62E436
 P 3725 3625
 F 0 "#PWR037" H 3725 3375 50  0001 C CNN
@@ -161,7 +209,7 @@ SCLK_0
 Wire Wire Line
 	3675 4000 3825 4000
 $Comp
-L dlhr-l10d-e1bd-c-nav8:DLHR-L10D-E1BD-C-NAV8 U9
+L DLHR-L10D-E1BD-C-NAV8 U9
 U 1 1 5C62E441
 P 4375 3825
 F 0 "U9" H 4375 3500 60  0000 C CNN
@@ -180,7 +228,7 @@ SS_2
 Wire Wire Line
 	5125 3625 4900 3625
 $Comp
-L power:+3.3V #PWR038
+L +3.3V #PWR038
 U 1 1 5C62E4AC
 P 3475 4525
 F 0 "#PWR038" H 3475 4375 50  0001 C CNN
@@ -195,7 +243,7 @@ Wire Wire Line
 Wire Wire Line
 	3475 4725 3825 4725
 $Comp
-L power:GND #PWR039
+L GND #PWR039
 U 1 1 5C62E4B4
 P 3725 4600
 F 0 "#PWR039" H 3725 4350 50  0001 C CNN
@@ -216,7 +264,7 @@ SCLK_0
 Wire Wire Line
 	3675 4975 3825 4975
 $Comp
-L dlhr-l10d-e1bd-c-nav8:DLHR-L10D-E1BD-C-NAV8 U11
+L DLHR-L10D-E1BD-C-NAV8 U11
 U 1 1 5C62E4BF
 P 4375 4800
 F 0 "U11" H 4375 4475 60  0000 C CNN
@@ -239,7 +287,7 @@ Text Notes 3250 1275 0    59   ~ 0
 Text Notes 8550 1275 0    59   ~ 0
 0 - 15 PSIA Pressure Sensor
 $Comp
-L hscdann015pa2a5:HSCDANN015PA2A5 U4
+L HSCDANN015PA2A5 U4
 U 1 1 5C62EF78
 P 9175 1825
 F 0 "U4" H 9175 1625 39  0000 C CNN
@@ -250,7 +298,7 @@ F 3 "" H 9175 1825 59  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR040
+L GND #PWR040
 U 1 1 5C62EFEF
 P 8625 1675
 F 0 "#PWR040" H 8625 1425 50  0001 C CNN
@@ -263,7 +311,7 @@ $EndComp
 Wire Wire Line
 	8625 1675 8725 1675
 $Comp
-L power:+5V #PWR041
+L +5V #PWR041
 U 1 1 5C62F065
 P 8250 1675
 F 0 "#PWR041" H 8250 1525 50  0001 C CNN
@@ -286,7 +334,7 @@ Wire Wire Line
 Wire Wire Line
 	9625 1675 9825 1675
 $Comp
-L Device:Q_NMOS_GSD Q2
+L Q_NMOS_GSD Q2
 U 1 1 5C62F348
 P 8500 3025
 F 0 "Q2" V 8750 2925 50  0000 L CNN
@@ -301,7 +349,7 @@ SDA_H
 Text GLabel 8150 3125 0    39   Input ~ 0
 SDA_L
 $Comp
-L Device:R R6
+L R R6
 U 1 1 5C62FA62
 P 8225 2850
 F 0 "R6" V 8305 2850 50  0000 C CNN
@@ -323,7 +371,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 2625 8500 2825
 $Comp
-L power:+3.3V #PWR042
+L +3.3V #PWR042
 U 1 1 5C62FBAB
 P 8225 2575
 F 0 "#PWR042" H 8225 2425 50  0001 C CNN
@@ -335,7 +383,7 @@ F 3 "" H 8225 2575 50  0001 C CNN
 $EndComp
 Connection ~ 8225 2625
 $Comp
-L Device:R R7
+L R R7
 U 1 1 5C62FC3F
 P 8800 2850
 F 0 "R7" V 8880 2850 50  0000 C CNN
@@ -351,7 +399,7 @@ Wire Wire Line
 	8800 3125 8800 3000
 Connection ~ 8800 3125
 $Comp
-L power:+5V #PWR043
+L +5V #PWR043
 U 1 1 5C62FE33
 P 8800 2575
 F 0 "#PWR043" H 8800 2425 50  0001 C CNN
@@ -364,7 +412,7 @@ $EndComp
 Wire Wire Line
 	8800 2700 8800 2575
 $Comp
-L Device:Q_NMOS_GSD Q3
+L Q_NMOS_GSD Q3
 U 1 1 5C630143
 P 9850 3025
 F 0 "Q3" V 10100 2925 50  0000 L CNN
@@ -379,7 +427,7 @@ SCL_H
 Text GLabel 9500 3125 0    39   Input ~ 0
 SCL_L
 $Comp
-L Device:R R8
+L R R8
 U 1 1 5C63014B
 P 9575 2850
 F 0 "R8" V 9655 2850 50  0000 C CNN
@@ -401,7 +449,7 @@ Wire Wire Line
 Wire Wire Line
 	9850 2625 9850 2825
 $Comp
-L power:+3.3V #PWR044
+L +3.3V #PWR044
 U 1 1 5C630157
 P 9575 2575
 F 0 "#PWR044" H 9575 2425 50  0001 C CNN
@@ -413,7 +461,7 @@ F 3 "" H 9575 2575 50  0001 C CNN
 $EndComp
 Connection ~ 9575 2625
 $Comp
-L Device:R R9
+L R R9
 U 1 1 5C63015E
 P 10150 2850
 F 0 "R9" V 10230 2850 50  0000 C CNN
@@ -429,7 +477,7 @@ Wire Wire Line
 	10150 3125 10150 3000
 Connection ~ 10150 3125
 $Comp
-L power:+5V #PWR045
+L +5V #PWR045
 U 1 1 5C630167
 P 10150 2575
 F 0 "#PWR045" H 10150 2425 50  0001 C CNN

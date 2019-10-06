@@ -1,6 +1,54 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:apa102c
+LIBS:ATSAMD21G18A-AU
+LIBS:B3FS-4005P
+LIBS:cortex_debug
+LIBS:lm2734
+LIBS:prtr5v0u2x
+LIBS:samd21g18a-au
+LIBS:dlhr-l10d-e1bd-c-nav8
+LIBS:hscdann015pa2a5
+LIBS:AP2112K-3.3TRG1
+LIBS:lm1117_edited
+LIBS:MF-MSMF050-2
+LIBS:mcp2515
+LIBS:mcp2551
+LIBS:cesd5v0ap
+LIBS:usb_micro_b
 LIBS:Pressure Scanner Board-cache
-EELAYER 30 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -25,7 +73,7 @@ Text Notes 10575 7650 0    49   ~ 0
 Text Notes 5275 2125 0    79   ~ 0
 CAN Controller + Transceiver
 $Comp
-L mcp2515:MCP2515 U14
+L MCP2515 U14
 U 1 1 5C6487A3
 P 4150 3800
 F 0 "U14" H 4150 3175 49  0000 C CNN
@@ -36,7 +84,7 @@ F 3 "" H 2950 3675 49  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mcp2551:MCP2551 U13
+L MCP2551 U13
 U 1 1 5C6487CB
 P 7600 3775
 F 0 "U13" H 7600 3450 49  0000 C CNN
@@ -51,7 +99,7 @@ TXCAN
 Text GLabel 3350 3400 0    39   Input ~ 0
 RXCAN
 $Comp
-L power:GND #PWR046
+L GND #PWR046
 U 1 1 5C648816
 P 3425 4350
 F 0 "#PWR046" H 3425 4100 50  0001 C CNN
@@ -66,7 +114,7 @@ Wire Wire Line
 Wire Wire Line
 	3425 4275 3550 4275
 $Comp
-L power:+3.3V #PWR047
+L +3.3V #PWR047
 U 1 1 5C6489C6
 P 4875 2900
 F 0 "#PWR047" H 4875 2750 50  0001 C CNN
@@ -87,7 +135,7 @@ NoConn ~ 3550 3900
 NoConn ~ 4750 4150
 NoConn ~ 4750 4275
 $Comp
-L Device:R_Small R10
+L R_Small R10
 U 1 1 5C648A47
 P 5050 3125
 F 0 "R10" H 5080 3145 50  0000 L CNN
@@ -114,7 +162,7 @@ Wire Wire Line
 Wire Wire Line
 	5050 3900 4750 3900
 $Comp
-L Device:Crystal Y2
+L Crystal Y2
 U 1 1 5C648B55
 P 2850 4100
 F 0 "Y2" V 2900 4275 50  0000 C CNN
@@ -141,7 +189,7 @@ Wire Wire Line
 Wire Wire Line
 	3150 4150 3550 4150
 $Comp
-L Device:C_Small C16
+L C_Small C16
 U 1 1 5C648C45
 P 2325 3900
 F 0 "C16" V 2425 3925 50  0000 L CNN
@@ -152,7 +200,7 @@ F 3 "" H 2325 3900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C_Small C18
+L C_Small C18
 U 1 1 5C648C82
 P 2325 4300
 F 0 "C18" V 2200 4200 50  0000 L CNN
@@ -163,7 +211,7 @@ F 3 "" H 2325 4300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR048
+L GND #PWR048
 U 1 1 5C648CB1
 P 2050 4100
 F 0 "#PWR048" H 2050 3850 50  0001 C CNN
@@ -193,7 +241,7 @@ Wire Wire Line
 Wire Wire Line
 	6975 3575 7125 3575
 $Comp
-L power:GND #PWR049
+L GND #PWR049
 U 1 1 5C649298
 P 6975 3700
 F 0 "#PWR049" H 6975 3450 50  0001 C CNN
@@ -210,7 +258,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3825 7125 3825
 $Comp
-L Device:R_Small R11
+L R_Small R11
 U 1 1 5C64939D
 P 8250 3575
 F 0 "R11" V 8400 3550 50  0000 L CNN
@@ -221,7 +269,7 @@ F 3 "" H 8250 3575 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR050
+L GND #PWR050
 U 1 1 5C649485
 P 8450 3575
 F 0 "#PWR050" H 8450 3325 50  0001 C CNN
@@ -237,7 +285,7 @@ Wire Wire Line
 	8350 3575 8450 3575
 NoConn ~ 8075 3950
 $Comp
-L power:GND #PWR051
+L GND #PWR051
 U 1 1 5C649B47
 P 8400 4550
 F 0 "#PWR051" H 8400 4300 50  0001 C CNN
@@ -258,7 +306,7 @@ Wire Wire Line
 Wire Wire Line
 	8075 3700 8480 3700
 $Comp
-L Device:R R12
+L R R12
 U 1 1 5C649D1F
 P 9175 3750
 F 0 "R12" V 9255 3750 50  0000 C CNN
@@ -299,7 +347,7 @@ Optional 120 Ohm\nTermination Resistor
 Text Notes 8000 4875 0    39   ~ 0
 Transient Voltage Protection
 $Comp
-L Device:C_Small C17
+L C_Small C17
 U 1 1 5C64AAF4
 P 6500 3975
 F 0 "C17" H 6325 4050 50  0000 L CNN
@@ -310,7 +358,7 @@ F 3 "" H 6500 3975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR052
+L GND #PWR052
 U 1 1 5C64ABB3
 P 6500 4125
 F 0 "#PWR052" H 6500 3875 50  0001 C CNN
@@ -324,7 +372,7 @@ Wire Wire Line
 	6500 4125 6500 4075
 Connection ~ 6500 3825
 $Comp
-L Device:C_Small C15
+L C_Small C15
 U 1 1 5C64AE69
 P 5300 3125
 F 0 "C15" H 5310 3195 50  0000 L CNN
@@ -351,7 +399,7 @@ Wire Wire Line
 	5300 2950 5300 3025
 Connection ~ 5050 2950
 $Comp
-L power:GND #PWR053
+L GND #PWR053
 U 1 1 5C64B180
 P 5300 3275
 F 0 "#PWR053" H 5300 3025 50  0001 C CNN
@@ -364,7 +412,7 @@ $EndComp
 Wire Wire Line
 	5300 3275 5300 3225
 $Comp
-L cesd5v0ap:ESDA6V1L D3
+L ESDA6V1L D3
 U 1 1 5C86D38B
 P 8400 4275
 F 0 "D3" H 8600 4325 39  0000 C CNN
@@ -375,7 +423,7 @@ F 3 "" H 8400 4275 39  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR054
+L +5V #PWR054
 U 1 1 5C8EBD26
 P 6500 3675
 F 0 "#PWR054" H 6500 3525 50  0001 C CNN
