@@ -34,8 +34,20 @@ void setup() {
   
 }
 
+unsigned char test[8] = {0,0,0,0,0,0,0,0};
+
 void loop() {
 
 // Will add code to test transceiver
+
+  test[7] += 1;
+  
+  if(test[7] == 100){
+    test[7] = 0;
+  }
+
+  CAN.sendMsgBuf(0x00, 0, 8, test);
+  SerialUSB.println("Sent Message\n");
+  delay(1000);
 
 }

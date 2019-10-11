@@ -18,7 +18,7 @@ SPISettings Standard(2000000, MSBFIRST, SPI_MODE0);
  * Digital Pin 12 / PA19 / SERCOM 1, PAD3 -> MISO
  * Digital Pin 13 / PA17 / SERCOM 1, PAD1 -> SCK
  * Digital Pin 11 / PA16 / SERCOM 1, PAD0 -> MOSI
- * SPI_PAD_0_SCK1 indicates MOSI on PAD0 and SCK on PAD1
+ * SPI_PAD_0_SCK_1 indicates MOSI on PAD0 and SCK on PAD1
  * SERCOM_RX_PAD3 indicates MISO is on PAD3
  */
 

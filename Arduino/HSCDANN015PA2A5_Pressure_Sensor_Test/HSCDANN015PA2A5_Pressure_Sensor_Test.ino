@@ -1,3 +1,16 @@
+/*
+ * Title: Static Pressure Sensor I2C Test
+ * Author: G. Chow
+ * Edited: M. Cox
+ * Revision Date: 10/10/19
+ * Description: Using Pressure Scanner Board to test
+ * out the use of the single static pressure sensor
+ * and confirm operation. 
+ * 
+ * Rev Notes: Updated code to be compatible with the
+ * actual pressure scanner board
+ */
+
 #include <Wire.h>
 //MUST HAVE 10k PULL UP RESISTORS ON BOTH SDA AND SCL LINES
 //SDA - A4
@@ -15,7 +28,8 @@ double celsius = 0;
 
 void setup() {
   Wire.begin();           //WIRE(I2C) LIBRARY INITIALIZATION
-  Serial.begin(9600);     //SERIAL MONITOR
+  SerialUSB.begin(115200);     //SERIAL MONITOR
+  while(!SerialUSB);
 }
 
 void loop() {
@@ -23,14 +37,14 @@ void loop() {
   calcPressure();         //CALCULATE/CONVERT PRESSURE
   calcTemp();             //CALCULATE/CONVERT TEMPERATURE
 
-  //Serial.println(output);
-  //Serial.println(temp);
+  //SerialUSB.println(output);
+  //SerialUSB.println(temp);
 
-  Serial.println("Pressure (PSI): ");     //PRINTS PRESSURE ON SERIAL MONITOR
-  Serial.println(psi);
-  Serial.println("Temperature (C): ");    //PRINTS TEMPERATURE ON SERIAL MONITOR
-  Serial.println(celsius);
-  Serial.println("");
+  SerialUSB.println("Pressure (PSI): ");     //PRINTS PRESSURE ON SERIAL MONITOR
+  SerialUSB.println(psi);
+  SerialUSB.println("Temperature (C): ");    //PRINTS TEMPERATURE ON SERIAL MONITOR
+  SerialUSB.println(celsius);
+  SerialUSB.println("");
   
   delay(1000);            //DELAY TO MAKE IT READABLE
 }
@@ -40,11 +54,11 @@ void readData() {
 
   if(4 <= Wire.available()) {             //NUMBER OF BYTES AVAILABLE TO BE READ
     output = Wire.read() & 0x3F;          //FIRST BYTE READ AND IGNORE FIRST TWO BITS (STATUS BITS)
-    //Serial.println(output);
+    //SerialUSB.println(output);
     output = output << 8;                 //LEFT SHIFT 8 BITS (MSB)
     output |= Wire.read();                //SECOND BYTE READ AND APPEND TO OUTPUT (LSB)
     //int lsb = Wire.read();
-    //Serial.println(lsb);
+    //SerialUSB.println(lsb);
 
     temp = Wire.read();                   //THIRD BYTE READ
     temp = temp << 3;                     //LEFT SHIFT 3 BITS
@@ -59,4 +73,3 @@ void calcPressure() {
 void calcTemp() {
   celsius = ((double)temp/2047*200)-50;   //TEMPERATURE CONVERSION EQUATION FOR 11 BITS FROM DATA SHEET
 }
-

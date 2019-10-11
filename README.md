@@ -18,9 +18,12 @@ Test To-Do List:
 - ~~Confirm communication with CAN Controller IC~~
 - ~~Incorporate basic changes to variant files to support SPI~~
 - Test sending and receiving of CAN messages
-- Confirm communication with Static Pressure Sensor
+	- Transceiver is receiving data at TXD pin but for some reason RS pin voltage is too high and
+	thus chip is in standby...
+- ~~Confirm communication with Static Pressure Sensor~~
 - Confirm communication with Differential Pressure Sensors
+	- Something is wrong with my SPIClass declaration and Slave Select pinPeripheral settings. Debug further
 - Test code to confirm operation of Differential Pressure Sensors with manometer (CC: Charlie Kniffin)
 - Draft of application code (reading sensors -> preparing data frames -> sending over CAN)
-- Prepare Interface Control Document (ICD) and add to AIM CAN configuration~~
+- Prepare Interface Control Document (ICD) and add to AIM CAN configuration
 - Finalize application code
