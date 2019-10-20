@@ -1,9 +1,10 @@
 /*
  * Author: M. Cox
  * Date: 1/3/19
- * Updated: 10/10/19
+ * Updated: 10/20/19
  * Description: Testing operation of DLHR-L10D-E1BD-C-NAV8
  * differential pressure sensor on production board
+ * Status: Working!
  */
 #include <SPI.h>
 #include "wiring_private.h"
@@ -15,7 +16,7 @@
 #define startAvg8       0xAE
 #define startAvg16      0xAF
 
-#define SensorReadByte  0xF0      // This must be followed by 6 byts of 0x00, done in function
+#define SensorReadByte  0xF0      // This must be followed by 6 bytes of 0x00, done in function
 #define SensorStatus    0xF0      // Send only this one byte for status
 
 /* 
@@ -31,7 +32,7 @@
 
 SPIClass PressureSPI(&sercom4, 22, 24, 23, SPI_PAD_2_SCK_3, SERCOM_RX_PAD_0);
 
-SPISettings Standard(2000000, MSBFIRST, SPI_MODE0);
+SPISettings Standard(1000000, MSBFIRST, SPI_MODE0);
 
 const int SS_0 = 4;
 const int SS_1 = 3;
@@ -59,6 +60,8 @@ void setup() {
   pinPeripheral(22, PIO_SERCOM_ALT);
   pinPeripheral(23, PIO_SERCOM_ALT);
   pinPeripheral(24, PIO_SERCOM_ALT);
+  pinPeripheral(0, PIO_DIGITAL);
+  pinPeripheral(1, PIO_DIGITAL);
 
   digitalWrite(SS_0, HIGH);
   digitalWrite(SS_1, HIGH);
@@ -68,37 +71,28 @@ void setup() {
 
 void loop() {
 
-  // Just want to see some SPI output on the board right now
-  //sendMeasurecmd(startSingleRead, SS_0);
+  digitalWrite(SS_1, LOW);
+  digitalWrite(SS_1, HIGH);
 
-  PressureSPI.beginTransaction(Standard);
-
-  digitalWrite(SS_3, LOW);
-
-  PressureSPI.transfer(0x4C);
-
-  digitalWrite(SS_3, HIGH);
-
-  PressureSPI.endTransaction();
-
-  SerialUSB.println("message sent");
-
-  delay(200);
+  sendMeasurecmd(startAvg16, SS_1);
 
   // Continuously read status byte until sensor processing complete
   // This will most likely be a timed polling in the future
-//  while(measurementStatus == 0){
-//    chipStatus = readStatus();
-//    
-//    if(((chipStatus >> 5) & 0b001) == 1){
-//      measurementStatus == 1; 
-//    }
-//  }
-//
-//  pressureReading = readMeasurement();
-//  measurementStatus = 0;
-//
-//  printf("Pressure raw (in H20): %d", pressureReading);
+  while(measurementStatus == 0){
+    chipStatus = readStatus(SS_1);
+    byte chipTest = (chipStatus >> 5) & 0b001;
+    if(chipTest == 0){
+      measurementStatus = 1; 
+    }
+    delay(1000);
+  }
+  
+  pressureReading = readMeasurement(SS_1);
+  measurementStatus = 0;
+  
+  SerialUSB.println("Pressure (in H20): ");
+  // Shift by 8 to see what the 16 bit version would look like 
+  SerialUSB.println(pressureReading >> 8);
 }
 
 void sendMeasurecmd(byte command, const int chipSelectPin) {
@@ -131,23 +125,21 @@ uint32_t readMeasurement(const int chipSelectPin){
   
   // Lower SS pin
   digitalWrite(chipSelectPin, LOW);
-
-  // Send read byte command
-  PressureSPI.transfer(SensorReadByte);
-
-  // Send dummy bytes
-  for(uint8_t i = 0; i < 6; i++){
-    PressureSPI.transfer(0x00);
-  }
   
   // Read in status byte
-  readByte = PressureSPI.transfer(0x00);
+  readByte = PressureSPI.transfer(SensorReadByte);
 
+  // Read in pressure data bytes
   for(uint8_t i = 3; i > 0; i--){
     readByte = PressureSPI.transfer(0x00);
-    pressure |= (readByte << (8 * i));
+    pressure |= (readByte << (8 * (i - 1)));
   }
 
+  // Send the other three dummy bytes but don't read back the temperature
+  PressureSPI.transfer(0x00);
+  PressureSPI.transfer(0x00);
+  PressureSPI.transfer(0x00);
+  
   // Raise SS pin
   digitalWrite(chipSelectPin, HIGH);
 
@@ -166,10 +158,10 @@ byte readStatus(const int chipSelectPin){
   digitalWrite(chipSelectPin, LOW);
 
   // Send status byte command
-  PressureSPI.transfer(SensorStatus);
+  //PressureSPI.transfer(SensorStatus);
 
   // Send dummy byte to read received byte
-  byte status = PressureSPI.transfer(0x00);
+  byte statusByte = PressureSPI.transfer(SensorStatus);
   
   // Raise SS pin
   digitalWrite(chipSelectPin, HIGH);
@@ -177,5 +169,5 @@ byte readStatus(const int chipSelectPin){
   // Complete SPI Transaction
   PressureSPI.endTransaction();
 
-  return status;
+  return statusByte;
 }
