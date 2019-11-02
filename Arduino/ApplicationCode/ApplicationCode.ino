@@ -8,6 +8,7 @@
  */
 #include <SPI.h>
 #include "wiring_private.h"
+#include "mcp_can.h"
 
 // Sensor Constants
 #define startSingleRead 0xAA
@@ -18,6 +19,8 @@
 
 #define SensorReadByte  0xF0      // This must be followed by 6 bytes of 0x00, done in function
 #define SensorStatus    0xF0      // Send only this one byte for status
+
+#define CAN_SS 13
 
 /* 
  *  Define a new SPI module on SERCOM4
@@ -44,6 +47,10 @@ uint32_t sensor2;
 uint32_t sensor3;
 uint32_t sensor4;
 
+byte canArray[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+MCP_CAN CAN(CAN_SS);
+
 void setup() {
   SerialUSB.begin(115200);
   while(!SerialUSB);
@@ -67,36 +74,50 @@ void setup() {
   digitalWrite(SS_1, HIGH);
   digitalWrite(SS_2, HIGH);
   digitalWrite(SS_3, HIGH);
+
+  while (CAN_OK != CAN.begin(CAN_1000KBPS)){
+    SerialUSB.println("CAN Bus init failed");
+  }
+  
 }
 
 void loop() {
-
-  delay(2000);
-
-  sensor1 = readSensor(startAvg16, SS_0);
-  sensor2 = readSensor(startAvg16, SS_1);
-  sensor3 = readSensor(startAvg16, SS_2);
-  //sensor4 = readSensor(startAvg16, SS_3);
   
-  SerialUSB.println("Sensor 1: ");
-  SerialUSB.println(sensor1 >> 16);
-  SerialUSB.println("Sensor 2: ");
-  SerialUSB.println(sensor2 >> 16);
-  SerialUSB.println("Sensor 3: ");
-  SerialUSB.println(sensor3 >> 16);
-  //SerialUSB.println("Sensor 4: ");
-  //SerialUSB.println(sensor4 >> 16);
+  delay(200);
+  sendData();
 }
 
-uint32_t readSensor(byte command, const int chipSelectPin) {
+void sendData(void){
+
+  // Issue measure commands to all sensors since they take 50ms to read
+  sendMeasurecmd(startAvg16, SS_0);
+  sendMeasurecmd(startAvg16, SS_1);
+  sendMeasurecmd(startAvg16, SS_2);
+  
+  sensor1 = readSensor(SS_0);
+  sensor2 = readSensor(SS_1);
+  sensor3 = readSensor(SS_2);
+
+  SerialUSB.println("Sensor Read Success");
+
+  canArray[0] = sensor1 >> 8;
+  canArray[1] = sensor1;
+  canArray[2] = sensor2 >> 8;
+  canArray[3] = sensor2;
+  canArray[4] = sensor3 >> 8;
+  canArray[5] = sensor3;
+
+  CAN.sendMsgBuf(0x5D, 0, 8, canArray);
+
+  SerialUSB.println("CAN Send Data Success");
+}
+
+uint32_t readSensor(const int chipSelectPin) {
 
   uint32_t sensorReading;
   byte chipStatus = 0;
   bool measurementStatus = 0;
   
-  // Send measure command
-  sendMeasurecmd(command, chipSelectPin);
-
   while(measurementStatus == 0){
     chipStatus = readStatus(chipSelectPin);
     byte chipTest = (chipStatus >> 5) & 0b001;
